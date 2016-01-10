@@ -14,7 +14,17 @@ namespace tarea1
 
         }
 
+        public void Llenardatos()
+        {
+            
+        }
+
         protected void GuardarButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void DescripcionTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
