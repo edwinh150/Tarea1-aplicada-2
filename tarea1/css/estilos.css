@@ -1,0 +1,51 @@
+body
+{
+    background: #808080;
+}
+
+.Registro {
+    background:#ffffff;
+    width: 280px;
+    height: 160px;
+    padding: 20px;
+    border: 7px solid #000000;
+    margin:20px;
+    position:absolute;
+    right:500px;
+    bottom:200px;
+}
+
+.NombreMio
+{
+    font-size: 20px;
+    background:#000000;
+    color:#ffffff;
+    text-decoration:none;
+    position:absolute;
+    top:560px;
+}
+
+header
+{
+    background:#00a7dd;
+    
+}
+
+label 
+{
+    color: #000000;
+    font-size:15px;
+}
+
+a{
+    font-size: 20px;
+    color:#ffffff;
+    text-decoration:none;
+    margin: 10px 20px 10px 10px;
+    display:inline-block;
+}
+
+footer
+{
+    background:#000000;
+}

@@ -44,7 +44,7 @@
 
     <footer>
     </footer>
-        <p id="Nombre"> Edwin Hidalgo </p>
+        <p class="NombreMio" id="Nombre"> Edwin Hidalgo </p>
     </body>
 
 </html>
