@@ -75,18 +75,29 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="PrincipalWebForm.aspx" />
+    <Content Include="RegistroWebForm.aspx" />
+    <Content Include="ConsultarWebForm.aspx" />
+    <Content Include="SQL\CuentasSQL.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PrincipalWebForm.aspx.cs">
-      <DependentUpon>PrincipalWebForm.aspx</DependentUpon>
+    <Compile Include="BLL\Cuentas.cs" />
+    <Compile Include="DAL\ConexionDB.cs" />
+    <Compile Include="RegistroWebForm.aspx.cs">
+      <DependentUpon>RegistroWebForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PrincipalWebForm.aspx.designer.cs">
-      <DependentUpon>PrincipalWebForm.aspx</DependentUpon>
+    <Compile Include="RegistroWebForm.aspx.designer.cs">
+      <DependentUpon>RegistroWebForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ConsultarWebForm.aspx.cs">
+      <DependentUpon>ConsultarWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarWebForm.aspx.designer.cs">
+      <DependentUpon>ConsultarWebForm.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

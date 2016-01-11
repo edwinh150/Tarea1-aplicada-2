@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PrincipalWebForm.aspx.cs" Inherits="tarea1.PrincipalWebForm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistroWebForm.aspx.cs" Inherits="tarea1.PrincipalWebForm" %>
 
 <!DOCTYPE html>
 
@@ -16,8 +16,8 @@
     <header> 
         <nav>
             <ul>
-                <a href= "#" >Inicio</a> 
-                <a href= "#" >Consultar</a>
+                <a href= "RegistroWebForm.aspx" >Registro</a> 
+                <a href= "ConsultarWebForm.aspx" >Consultar</a>
                 <a href= "#" >Informacion</a>
             </ul>
         </nav>
@@ -26,7 +26,7 @@
         <div class="Registro">
         <label for="cuentaid">CuentasId</label> <br />
         <asp:TextBox ID="CuentaIdTextBox" runat="server" Width="201px" placeholder="Escribe el Id"></asp:TextBox>
-        <asp:Button ID="BuscarButton" runat="server" Text="Buscar" />
+        <asp:Button ID="BuscarButton" runat="server" Text="Buscar" OnClick="BuscarButton_Click" />
         <br />
         <label>Descripcion</label> <br />
             <asp:TextBox ID="DescripcionTextBox" runat="server" Width="260px" placeholder="Escribe una Descripcion"></asp:TextBox>
@@ -36,15 +36,16 @@
         <br />
         <p>
             <asp:Button ID="GuardarButton" runat="server" OnClick="GuardarButton_Click" Text="Guardar" Width="85px" />
-            <asp:Button ID="ModificarButton" runat="server" Text="Modificar" Width="92px" />
-            <asp:Button ID="EliminarButton" runat="server" Text="Eliminar" Width="85px" />
+            <asp:Button ID="ModificarButton" runat="server" Text="Modificar" Width="92px" OnClick="ModificarButton_Click" />
+            <asp:Button ID="EliminarButton" runat="server" Text="Eliminar" Width="85px" OnClick="EliminarButton_Click" />
         </p>
         </div>
     </form>
 
     <footer>
-    </footer>
         <p class="NombreMio" id="Nombre"> Edwin Hidalgo </p>
+    </footer>
+        
     </body>
 
 </html>
