@@ -68,18 +68,18 @@ namespace tarea1
             {
                 if (Cuenta.Insertar())
                 {
-                    //MessageBox.Show("Guardado Correctamente", "Confirmar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    HttpContext.Current.Response.Write("<Script>alert('Se Guardo Correctamente')</Script>");
 
                     Limpiar();
                 }
                 else
                 {
-                    // MessageBox.Show("Error Al Guardar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    HttpContext.Current.Response.Write("<Script>alert('Error al Guardar')</Script>");
                 }
             }
             else
             {
-                //MessageBox.Show("Faltan Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                HttpContext.Current.Response.Write("<Script>alert('Faltan Datos')</Script>");
             }
         }
 
@@ -96,13 +96,13 @@ namespace tarea1
 
                     if (Cuenta.Editar())
                     {
-                        //MessageBox.Show("Modificado Correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        HttpContext.Current.Response.Write("<Script>alert('Se Modifico Correctamente')</Script>");
 
                         Limpiar();
                     }
                     else
                     {
-                        // MessageBox.Show("Error Al Modificar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        HttpContext.Current.Response.Write("<Script>alert('Error al Modificar')</Script>");
                     }
                 }
         }
@@ -115,18 +115,18 @@ namespace tarea1
 
                 if (Cuenta.Eliminar())
                 {
-                    //MessageBox.Show("Eliminado Correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    HttpContext.Current.Response.Write("<Script>alert('Se Elimino Correctamente')</Script>");
 
                     Limpiar();
                 }
                 else
                 {
-                    // MessageBox.Show("Error Al Eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    HttpContext.Current.Response.Write("<Script>alert('Error al Eliminar')</Script>");
                 }
             }
             else
             {
-
+                HttpContext.Current.Response.Write("<Script>alert('No hay Registro')</Script>");
             }
         }
 
@@ -139,6 +139,14 @@ namespace tarea1
                     DescripcionTextBox.Text = Cuenta.Descripcion.ToString();
                     BalanceTextBox.Text = Cuenta.Balance.ToString();
                 }
+                else
+                {
+                    HttpContext.Current.Response.Write("<Script>alert('No hay Registro')</Script>");
+                }
+            }
+            else
+            {
+                HttpContext.Current.Response.Write("<Script>alert('Ingrese un numero Valido')</Script>");
             }
         }
     }

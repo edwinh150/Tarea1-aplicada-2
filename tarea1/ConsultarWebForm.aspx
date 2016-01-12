@@ -25,26 +25,24 @@
         <br />
         </div>
         <div class="ConsultarGrid">
-            <asp:GridView ID="ConsultarGridView" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Height="178px" Width="494px">
-                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+            <asp:GridView ID="ConsultarGridView" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="178px" Width="494px" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px">
+                <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="CuentaId" HeaderText="CuentaId" InsertVisible="False" ReadOnly="True" SortExpression="CuentaId" />
                     <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
                     <asp:BoundField DataField="Balance" HeaderText="Balance" SortExpression="Balance" />
                 </Columns>
-                <EditRowStyle BackColor="#999999" />
-                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                <FooterStyle BackColor="#CCCC99" />
+                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                <RowStyle BackColor="#F7F7DE" />
+                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                <SortedAscendingHeaderStyle BackColor="#848384" />
+                <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                <SortedDescendingHeaderStyle BackColor="#575357" />
             </asp:GridView>
             </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CuentasSQLConnectionString %>" SelectCommand="SELECT [CuentaId], [Descripcion], [Balance] FROM [Cuentas]"></asp:SqlDataSource>
     </form>
 </body>
 

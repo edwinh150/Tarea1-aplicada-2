@@ -26,12 +26,18 @@ namespace tarea1.SQL
             return Id;
         }
 
+        public void Limpiar()
+        {
+            CuentaIdTextBox.Text = "";
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            //ConsultarGridView.DataSource = Cuenta.Listado(" * ", " 1=1 ", "");
+            ConsultarGridView.DataSource = Cuenta.Listado(" * ", " 1=1 ", "");
+            ConsultarGridView.DataBind();
             if (ConsultarGridView.Rows.Count == 0)
             {
-                //MessageBox.Show("No hay registradas.");
+                HttpContext.Current.Response.Write("<Script>alert('No hay Registro')</Script>");
             }
         }
 
@@ -41,12 +47,23 @@ namespace tarea1.SQL
             {
                 if (Cuenta.Buscar(ValidarIdEntero(CuentaIdTextBox.Text)))
                 {
-                    ConsultarGridView.DataSource = Cuenta.Listado(" * ", " CuentaId = " + CuentaIdTextBox , "");
+                    ConsultarGridView.DataSource = Cuenta.Listado(" * ", " CuentaId = " + CuentaIdTextBox.Text , "");
+                    ConsultarGridView.DataBind();
+
+                    Limpiar();
                 }
                 else
                 {
-                    //MessageBox.Show("No hay registradas.");
+                    HttpContext.Current.Response.Write("<Script>alert('No hay Registro')</Script>");
+
+                    Limpiar();
                 }
+            }
+            else
+            {
+                HttpContext.Current.Response.Write("<Script>alert('Ingrese un numero Valido')</Script>");
+
+                Limpiar();
             }
         }
     }
