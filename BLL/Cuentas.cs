@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.data;
 using DAL;
+using System.Data;
 
 namespace BLL
 {
@@ -16,13 +16,13 @@ namespace BLL
 
         public int CuentaId { get; set; }
         public string Descripcion { get; set; }
-        public float Balance { get; set; }
+        public double Balance { get; set; }
 
         public Cuentas()
         {
             this.CuentaId = 0;
             this.Descripcion = "";
-            this.Balance = 0.0f;
+            this.Balance = 0.0;
         }
 
         public Cuentas(int CuentaId, string Descripcion, float Balance)
@@ -88,9 +88,8 @@ namespace BLL
 
                 if (dt.Rows.Count > 0)
                 {
-                    this.CuentaId = (int)dt.Rows[0]["CuentaId"];
                     this.Descripcion = dt.Rows[0]["Descripcion"].ToString();
-                    this.Balance = (float)dt.Rows[0]["Balance"];
+                    this.Balance = (double)dt.Rows[0]["Balance"];
                     retorno = true;
                 }
                 else
