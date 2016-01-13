@@ -101,9 +101,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{588e5e9b-c615-4bc7-b4f7-c7c0bc7c8997}</Project>
+      <Project>{637e2c8a-f6a1-497d-8abd-7fdb659d9c86}</Project>
       <Name>BLL</Name>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

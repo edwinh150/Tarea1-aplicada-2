@@ -50,7 +50,15 @@ namespace tarea1
             bool retorno = true;
 
             Cuenta.Descripcion = DescripcionTextBox.Text;
-            Cuenta.Balance = ValidarIdDouble(BalanceTextBox.Text);
+            if (ValidarIdDouble(BalanceTextBox.Text) == 0)
+            {
+                retorno = false;
+            }
+            else
+            {
+                Cuenta.Balance = ValidarIdDouble(BalanceTextBox.Text);
+            }
+            
 
             return retorno;
         }
@@ -104,6 +112,10 @@ namespace tarea1
                     {
                         HttpContext.Current.Response.Write("<Script>alert('Error al Modificar')</Script>");
                     }
+                }
+                else
+                {
+                    HttpContext.Current.Response.Write("<Script>alert('Faltan Datos')</Script>");
                 }
         }
 
